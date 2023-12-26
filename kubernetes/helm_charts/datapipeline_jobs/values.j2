@@ -194,8 +194,8 @@ post-publish-processor:
       metadata.replace_absolute_path={{ cloudstorage_replace_absolute_path | default('false') }}
       relative_path_prefix={{ cloudstorage_relative_path_prefix_content }}
       metadata.list={{ cloudstorage_metadata_list }}
-      read_base_path={{ cloudstorage_base_path }}
-      write_base_path={{ valid_cloudstorage_base_urls }}
+      read_base_path="{{ cloudstorage_base_path }}"
+      write_base_path=["{{ valid_cloudstorage_base_urls }}"]
     }
 
   flink-conf: |+
@@ -330,7 +330,7 @@ search-indexer:
       metadata.replace_absolute_path={{ cloudstorage_replace_absolute_path | default('false') }}
       relative_path_prefix={{ cloudstorage_relative_path_prefix_content }}
       metadata.list={{ cloudstorage_metadata_list }}
-      read_base_path={{ cloudstorage_base_path }}
+      read_base_path="{{ cloudstorage_base_path }}"
     }
 
   flink-conf: |+
@@ -385,8 +385,8 @@ asset-enrichment:
       metadata.replace_absolute_path={{ cloudstorage_replace_absolute_path | default('false') }}
       relative_path_prefix={{ cloudstorage_relative_path_prefix_content }}
       metadata.list={{ cloudstorage_metadata_list }}
-      read_base_path= "{{ cloudstorage_base_path }}"
-      write_base_path= ["{{ valid_cloudstorage_base_urls }}"]
+      read_base_path="{{ cloudstorage_base_path }}"
+      write_base_path=["{{ valid_cloudstorage_base_urls }}"]
     }
 
   flink-conf: |+
@@ -504,8 +504,8 @@ content-auto-creator:
       metadata.replace_absolute_path={{ cloudstorage_replace_absolute_path | default('false') }}
       relative_path_prefix={{ cloudstorage_relative_path_prefix_content }}
       metadata.list={{ cloudstorage_metadata_list }}
-      read_base_path={{ cloudstorage_base_path }}
-      write_base_path={{ valid_cloudstorage_base_urls }}
+      read_base_path="{{ cloudstorage_base_path }}"
+      write_base_path=["{{ valid_cloudstorage_base_urls }}"]
     }
 
     content_auto_creator {
@@ -801,8 +801,8 @@ content-publish:
       metadata.replace_absolute_path={{ cloudstorage_replace_absolute_path | default('false') }}
       relative_path_prefix={{ cloudstorage_relative_path_prefix_content }}
       metadata.list={{ cloudstorage_metadata_list }}
-      read_base_path={{ cloudstorage_base_path }}
-      write_base_path={{ valid_cloudstorage_base_urls }}
+      read_base_path="{{ cloudstorage_base_path }}"
+      write_base_path=["{{ valid_cloudstorage_base_urls }}"]
     }
 
     master.category.validation.enabled ="{{ master_category_validation_enabled }}"
@@ -845,8 +845,8 @@ qrcode-image-generator:
       metadata.replace_absolute_path={{ cloudstorage_replace_absolute_path | default('false') }}
       relative_path_prefix={{ cloudstorage_relative_path_prefix_dial }}
       metadata.list={{ cloudstorage_metadata_list }}
-      read_base_path={{ cloudstorage_base_path }}
-      write_base_path={{ valid_cloudstorage_base_urls }}
+      read_base_path="{{ cloudstorage_base_path }}"
+      write_base_path=["{{ valid_cloudstorage_base_urls }}"]
     }
 
     cloud_storage_type="{{ cloud_service_provider }}"
@@ -1079,8 +1079,8 @@ live-node-publisher:
       metadata.replace_absolute_path={{ cloudstorage_replace_absolute_path | default('false') }}
       relative_path_prefix={{ cloudstorage_relative_path_prefix_content }}
       metadata.list={{ cloudstorage_metadata_list }}
-      read_base_path={{ cloudstorage_base_path }}
-      write_base_path={{ valid_cloudstorage_base_urls }}
+      read_base_path="{{ cloudstorage_base_path }}"
+      write_base_path=["{{ valid_cloudstorage_base_urls }}"]
     }
 
   flink-conf: |+
@@ -1259,8 +1259,8 @@ csp-migrator:
       metadata.replace_absolute_path=false
       relative_path_prefix={{ cloudstorage_relative_path_prefix_content }}
       metadata.list={{ cloudstorage_metadata_list }}
-      read_base_path={{ cloudstorage_base_path }}
-      write_base_path={{ valid_cloudstorage_base_urls }}
+      read_base_path="{{ cloudstorage_base_path }}"
+      write_base_path=["{{ valid_cloudstorage_base_urls }}"]
     }
 
     migrationVersion = 1
@@ -1309,8 +1309,8 @@ cassandra-data-migration:
       metadata.replace_absolute_path=false
       relative_path_prefix={{ cloudstorage_relative_path_prefix_content }}
       metadata.list={{ cloudstorage_metadata_list }}
-      read_base_path={{ cloudstorage_base_path }}
-      write_base_path={{ valid_cloudstorage_base_urls }}
+      read_base_path="{{ cloudstorage_base_path }}"
+      write_base_path=["{{ valid_cloudstorage_base_urls }}"]
     }
 
   flink-conf: |+
